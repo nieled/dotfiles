@@ -4,7 +4,12 @@
 	for_window [class="chromium"] border none
 	for_window [class="firefox"] border none
 
-	#TODO: Change colors
+	# class                 border  backgr. text    indicator child_border
+    client.focused          #00C0C0 #285577 #ffffff #2e9ef4   #00C0C0
+    client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+    client.unfocused        #333333 #222222 #888888 #292d2e   #403C38 
+    client.urgent           #2f343a #900000 #ffffff #900000   #900000
+    client.placeholder #000000 #0c0c0c #ffffff #000000 #0c0c0c
 #}}}
 
 #{{{ Font
@@ -34,6 +39,9 @@
 	bindsym $mod+t exec firejail --seccomp transmission-qt
 	bindsym $mod+Shift+s exec "xbacklight -set 1"
 	bindsym $mod+Shift+a exec "arandr"
+
+	bindsym Print 			exec --no-startup-id scrot
+	bindsym Shift+Print 		exec --no-startup-id scrot -u
 
 	#{{{ Behavior 
 	    # To find out name of window use xprop
@@ -125,7 +133,7 @@
     bindsym $mod+6 workspace 6
     bindsym $mod+7 workspace 7
     bindsym $mod+8 workspace 8
-    bindsym $mod+9 workspace 9
+	bindsym $mod+9 workspace 9
     bindsym $mod+0 workspace 10
 
     # move focused container to workspace (number)
@@ -198,9 +206,9 @@ bar {
     	statusline #E4E3ED
         separator #666666
 
-        focused_workspace  #852C2F #DA1F26 #ffffff
-        active_workspace   #333333 #5f676a #ffffff
-        inactive_workspace #333333 #222222 #888888
-        urgent_workspace   #2f343a #900000 #ffffff
+        #focused_workspace  #852C2F #DA1F26 #ffffff
+        #active_workspace   #333333 #5f676a #ffffff
+        #inactive_workspace #333333 #222222 #888888
+        #urgent_workspace   #2f343a #900000 #ffffff
     }
 }
