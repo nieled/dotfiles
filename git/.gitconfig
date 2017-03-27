@@ -1,1 +1,7 @@
-/home/niel/.gitconfig
+[user]
+	name = Eduardo Calle
+	email = nieled@riseup.net
+[color]
+	ui = true
+[core]
+	editor = vim
